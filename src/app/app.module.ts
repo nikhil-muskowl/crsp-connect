@@ -26,6 +26,7 @@ import { ItProjectsComponent } from './pages/our-clients/it-projects/it-projects
 import { BenefitsComponent } from './pages/why-choose-us/benefits/benefits.component';
 import { DataSecurityComponent } from './pages/why-choose-us/data-security/data-security.component';
 import { WorkFlowProcessComponent } from './pages/why-choose-us/work-flow-process/work-flow-process.component';
+import { WhoWeAreSidebarComponent } from './pages/who-we-are/who-we-are-sidebar/who-we-are-sidebar.component';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { WorkFlowProcessComponent } from './pages/why-choose-us/work-flow-proces
     FooterComponent,
     HomeComponent,
     AboutUsComponent,
-    ContactComponent, WorkCultureComponent, VisionAndMissionComponent, CsrComponent, OurGroupOfCompaniesComponent, KeyPeopleComponent, BookeepingComponent, AccountingComponent, TaxPreparationComponent, PayrollComponent, MedicalBillingComponent, InventoryManagementComponent, ItSolutionsComponent, AccountantComponent, HealthcareComponent, OtherBusinessesComponent, ItProjectsComponent, BenefitsComponent, DataSecurityComponent, WorkFlowProcessComponent,
+    ContactComponent, WorkCultureComponent, VisionAndMissionComponent, CsrComponent, OurGroupOfCompaniesComponent, KeyPeopleComponent, BookeepingComponent, AccountingComponent, TaxPreparationComponent, PayrollComponent, MedicalBillingComponent, InventoryManagementComponent, ItSolutionsComponent, AccountantComponent, HealthcareComponent, OtherBusinessesComponent, ItProjectsComponent, BenefitsComponent, DataSecurityComponent, WorkFlowProcessComponent, WhoWeAreSidebarComponent,
   ],
 
   imports: [
