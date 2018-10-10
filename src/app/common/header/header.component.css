@@ -1,0 +1,52 @@
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff!important;
+    z-index: 10;
+  }
+
+  .navbar .dropdown-menu div[class*="col"] {
+    margin-bottom:1rem;
+ }
+ 
+ .navbar .dropdown-menu {
+   border:none;
+   background-color:#fff!important;
+ }
+ 
+ /* breakpoint and up - mega dropdown styles */
+ @media screen and (min-width: 992px) {
+   
+   /* remove the padding from the navbar so the dropdown hover state is not broken */
+ .navbar {
+   padding-top:0px;
+   padding-bottom:0px;
+ }
+ 
+ /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+ 
+ 
+ /* makes the dropdown full width  */
+ .navbar .megamenu-dropdown {position:static;}
+ 
+ .navbar .mega-menu {
+   width:45%;
+   left:22%;
+   right:0;
+  /* height of nav-item  */
+    top:110px;
+ }
+   
+   /* shows the dropdown menu on hover */
+ /* .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+   display:block!important;
+ } */
+   
+   /* .navbar .dropdown-menu {
+     border: 1px solid rgba(0,0,0,.15);
+     background-color: #fff;
+   } */
+ 
+ }
+ 
