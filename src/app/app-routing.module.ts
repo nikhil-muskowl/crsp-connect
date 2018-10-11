@@ -47,7 +47,7 @@ const routes: Routes = [
   { path: 'our-clients/it-projects', component: ItProjectsComponent },
   { path: 'why-choose-us/benefits', component: BenefitsComponent },
   { path: 'why-choose-us/data-security', component: DataSecurityComponent },
-  { path: 'why-choose-us/work-fllow-process', component: WorkFlowProcessComponent },
+  { path: 'why-choose-us/work-flow-process', component: WorkFlowProcessComponent },
   { path: 'contact-us', component: ContactComponent }
 ];
 

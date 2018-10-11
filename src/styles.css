@@ -26,7 +26,8 @@ https://bootstrapious.com/p/universal-business-e-commerce-template
   height: 500;
 }
 .boxed {
-    background: url("/assets/img/boxed-pattern.png");
+    /* background: url("/assets/img/boxed-pattern.png"); */
+    background: url("/assets/image/home/pattern.jpg");
   }
   
   .boxed #all {
