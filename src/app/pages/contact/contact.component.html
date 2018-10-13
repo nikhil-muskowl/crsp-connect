@@ -1,4 +1,4 @@
-<div id="heading-breadcrumbs" style="background: url(src/assets/image/contact/about-us.jpg) center top no-repeat;">
+<div id="heading-breadcrumbs" style="background: url(assets/image/contact/about-us.jpg) center top no-repeat;">
   <div class="container">
     <div class="row d-flex align-items-center flex-wrap">
       <div class="col-md-7">
@@ -16,49 +16,97 @@
 <div id="content">
   <div class="container">
     <section class="bar">
+
       <div class="row">
         <div class="col-lg-12">
           <div class="heading">
             <h2>CONTACT CRSP CONNECT PVT. LTD.</h2>
           </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h3>INQUIRY</h3>
+          <span *ngIf="msgSuccess" class="text-success">
+            {{msgSuccess}}
+          </span>
+          <span *ngIf="msgWarning" class="text-error">
+            {{msgWarning}}
+          </span>
+          <form class="form-horizontal" (ngSubmit)="submitForm()" [formGroup]="contactForm">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name" formControlName="name">
+                <span *ngIf="formErrors.name" class="text-error">
+                    {{formErrors.name}}
+                </span>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                <span *ngIf="formErrors.email" class="text-error">
+                    {{formErrors.email}}
+                </span>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Contact" formControlName="contact">
+                <span *ngIf="formErrors.contact" class="text-error">
+                    {{formErrors.contact}}
+                </span>
+              </div>
+              <div class="form-group">
+                  <textarea type="text" class="form-control" rows=8 cols=20 placeholder="Inquiry" formControlName="inquiry"></textarea>
+                  <span *ngIf="formErrors.inquiry" class="text-error">
+                      {{formErrors.inquiry}}
+                  </span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">SUBMIT</button>
+          </form>
+        </div>
+        <div class="col-lg-6">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-6">
               <h3>USA</h3>
-              <p class="text">Braj Aggarwal, CPA, P.C. ,</p>
-              <p class="text">37-05 74th Street 3rd Floor,</p>
-              <p class="text">Jackson Heights,</p>
-              <p class="text">NY-USA-11372</p>
-              <p class="text">Tel: +1 718-426-4661</p>
-              <p class="text">Fax: +1 718-233-2525</p>
+              <p class="text btm-mrg">Braj Aggarwal, CPA, P.C. ,</p>
+              <p class="text btm-mrg">37-05 74th Street 3rd Floor,</p>
+              <p class="text btm-mrg">Jackson Heights,</p>
+              <p class="text btm-mrg">NY-USA-11372</p>
+              <p class="text btm-mrg">Tel: +1 718-426-4661</p>
+              <p class="text btm-mrg">Fax: +1 718-233-2525</p>
+              <hr>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6">
               <h3>KOTA</h3>
-              <p class="text">Manglam Chambers, Gumanpura</p>
-              <p class="text">Kota(RAJ) – INDIA​</p>
-              <p class="text">&nbsp;</p>
-              <p class="text">&nbsp;</p>
-              <p class="text">Email: Info@crspconnect.com</p>
-              <p class="text">Tel: +91 9414187422, 9057206062</p>
-            </div>
-            <div class="col-md-3">
-              <h3>UDAIPUR</h3>
-              <p class="text">9E – Kothari Bhavan,</p>
-              <p class="text">Bhupalpura,</p>
-              <p class="text">Udaipur (RAJ) – INDIA</p>
-              <p class="text">&nbsp;</p>
-              <p class="text">Email: Info@crspconnect.com</p>
-              <p class="text">Tel: +91 9875770510, 9414157795</p>
-            </div>
-            <div class="col-md-3">
-              <h3>AHMEDABAD</h3>
-              <p class="text">L7, Mahavir Nagar,</p>
-              <p class="text">Opp. Auda Garden,</p>
-              <p class="text">Nr. Shyamal Cross Road, Satellite</p>
-              <p class="text">Ahmedabad (GUJ) – INDIA</p>
-              <p class="text">Email: Info@crspconnect.com</p>
-              <p class="text">Tel: +91 9898819000</p>
+              <p class="text btm-mrg">Manglam Chambers, Gumanpura</p>
+              <p class="text btm-mrg">Kota(RAJ) – INDIA​</p>
+              <p class="text btm-mrg">&nbsp;</p>
+              <p class="text btm-mrg">&nbsp;</p>
+              <p class="text btm-mrg">Email: Info@crspconnect.com</p>
+              <p class="text btm-mrg">Tel: +91 9414187422, 9057206062</p>
+              <hr>
             </div>
           </div>
+          <div class="row">
+              <div class="col-md-6">
+                <h3>UDAIPUR</h3>
+                <p class="text btm-mrg">9E – Kothari Bhavan,</p>
+                <p class="text btm-mrg">Bhupalpura,</p>
+                <p class="text btm-mrg">Udaipur (RAJ) – INDIA</p>
+                <p class="text btm-mrg">&nbsp;</p>
+                <p class="text btm-mrg">Email: Info@crspconnect.com</p>
+                <p class="text btm-mrg">Tel: +91 9875770510, 9414157795</p>
+                <hr>
+              </div>
+              <div class="col-md-6">
+                <h3>AHMEDABAD</h3>
+                <p class="text btm-mrg">L7, Mahavir Nagar,</p>
+                <p class="text btm-mrg">Opp. Auda Garden,</p>
+                <p class="text btm-mrg">Nr. Shyamal Cross Road, Satellite</p>
+                <p class="text btm-mrg">Ahmedabad (GUJ) – INDIA</p>
+                <p class="text btm-mrg">Email: Info@crspconnect.com</p>
+                <p class="text btm-mrg">Tel: +91 9898819000</p>
+                <hr>
+              </div>
+            </div>
         </div>
       </div>
     </section>

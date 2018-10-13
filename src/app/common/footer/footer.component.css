@@ -40,16 +40,21 @@
     margin-top: 0px;
   }
 
-  footer.main-footer .copyrights {
+  /* footer.main-footer .copyrights {
     padding: 20px 0 !important;
     height:60px !important;
-    background: #607D8B;
+    background: #467fbf !important;
   }
 
   #footer-outer-container {
-    /* background: #191919; */
-    /* background: #18100d; */
-    /* background: #467fbf; */
-    /* background: #4372a7; */
     background: #142a42;
+  } */
+
+  footer.main-footer .copyrights a {
+    color: #fff;
+  }
+
+  footer.main-footer .copyrights {
+    padding: 20px 0 !important;
+    height:60px !important;
   }

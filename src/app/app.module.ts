@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +33,8 @@ import { WhatWeDoSidebarComponent } from './pages/what-we-do/what-we-do-sidebar/
 import { OurClientsSidebarComponent } from './pages/our-clients/our-clients-sidebar/our-clients-sidebar.component';
 import { WhyChooseUsSidebarComponent } from './pages/why-choose-us/why-choose-us-sidebar/why-choose-us-sidebar.component';
 
+import { NotifierModule } from 'angular-notifier';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +48,50 @@ import { WhyChooseUsSidebarComponent } from './pages/why-choose-us/why-choose-us
 
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NotifierModule.withConfig({
+      position: {
+        horizontal: {
+          position: 'middle',
+          distance: 12
+        },
+        vertical: {
+          position: 'bottom',
+          distance: 12,
+          gap: 10
+        }
+      },
+      theme: 'material',
+      behaviour: {
+        autoHide: 5000,
+        onClick: false,
+        onMouseover: 'pauseAutoHide',
+        showDismissButton: true,
+        stacking: 4
+      },
+      animations: {
+        enabled: true,
+        show: {
+          preset: 'slide',
+          speed: 300,
+          easing: 'ease'
+        },
+        hide: {
+          preset: 'fade',
+          speed: 300,
+          easing: 'ease',
+          offset: 50
+        },
+        shift: {
+          speed: 300,
+          easing: 'ease'
+        },
+        overlap: 150
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
