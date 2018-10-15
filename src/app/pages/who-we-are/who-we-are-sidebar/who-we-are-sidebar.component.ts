@@ -12,6 +12,7 @@ export class WhoWeAreSidebarComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
   }
 
 }
