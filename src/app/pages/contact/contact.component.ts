@@ -4,7 +4,6 @@ import { FormServiceService } from '../../services/form-service.service';
 import { InquiryServiceService } from '../../services/inquiry-service.service';
 
 import { Router } from "@angular/router";
-import { NotifierService } from 'angular-notifier';
 
 @Component({
   selector: 'app-contact',
@@ -13,19 +12,19 @@ import { NotifierService } from 'angular-notifier';
 })
 export class ContactComponent implements OnInit {
 
-  private contactForm: FormGroup;
+  public contactForm: FormGroup;
 
-  private responseData;
+  public responseData;
 
-  private status;
-  private msgSuccess;
-  private msgWarning;
-  private message;
+  public status;
+  public msgSuccess;
+  public msgWarning;
+  public message;
 
-  private name: string;
-  private email: string;
-  private contact: string;
-  private inquiry: string;
+  public name: string;
+  public email: string;
+  public contact: string;
+  public inquiry: string;
 
   public formErrors = {
     name: '',
@@ -34,17 +33,16 @@ export class ContactComponent implements OnInit {
     inquiry: '',
   };
 
-  private readonly notifier: NotifierService;
 
   constructor(
     private formBuilder: FormBuilder,
     private formService: FormServiceService,
     private inquiryService: InquiryServiceService,
-    private notifierService: NotifierService,
+   
     private router: Router
   ) {
     
-    this.notifier = notifierService;
+   
     this.name = '';
     this.email = '';
     this.contact = '';
@@ -116,10 +114,7 @@ export class ContactComponent implements OnInit {
           //  this.router.navigate(['/my-account']);
          }
 
-          this.notifier.show({
-            type: 'success',
-            message: this.message,
-          });
+        
        },
        err => {
          console.error(err);
@@ -127,11 +122,7 @@ export class ContactComponent implements OnInit {
      );
 
    } else {
-     this.formErrors = this.formService.validateForm(this.contactForm, this.formErrors, false);
-     this.notifier.show({
-      type: 'warning',
-      message: 'Validation Error!',
-    });
+     this.formErrors = this.formService.validateForm(this.contactForm, this.formErrors, false);  
    }
   }
 }
