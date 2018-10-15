@@ -59,5 +59,41 @@
       padding-bottom: 20px;
       color: #fff;
       text-align: center;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.3);
+      background-size: cover;
+      height: 100%;
+  }
+
+  .carousel-caption .row {
+    margin-top: 16%;
+  }
+
+  @media (max-width: 767px) {
+    .carousel-caption .row {
+        margin-top: 8% !important; 
+    }
+    .carousel-caption h1 {
+        font-size: 0.6rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .carousel-caption .row {
+        margin-top: 8% !important; 
+    }
+    .carousel-caption h1 {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .carousel-caption .row {
+        margin-top: 8% !important; 
+    }
+    .carousel-caption h1 {
+        font-size: 1.0rem !important;
+        margin-bottom: 0.3rem !important;
+    }
   }
