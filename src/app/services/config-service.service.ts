@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ConfigService {
   public url;
-  constructor() {
-    this.url = 'http://social-app.muskowl.com/';
+  constructor() {    
+    this.url = 'http://www.crspconnect.com/back-office/';
   }
 }
